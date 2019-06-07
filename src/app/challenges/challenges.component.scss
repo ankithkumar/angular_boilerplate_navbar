@@ -1,0 +1,27 @@
+.container {
+    z-index: 1;
+    width: 100%;
+    margin: 5% auto;
+    .button {
+        width: 10%;
+        float: left;
+        a {
+            i {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .middle-container {
+        width: 80%;
+        float: left;
+    }
+
+    .boxes {
+        width: 30%;
+        margin: 1%;
+        border: 1px solid black;
+        height: 20vh;
+        float: right;
+    }
+}
