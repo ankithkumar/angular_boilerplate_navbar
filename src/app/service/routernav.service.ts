@@ -12,14 +12,14 @@ export class RouterNav {
     }
 
     clearHistoryStack() {
-        this.historyStack();
+        this.historyStack = [];
     }
 
     goback() {
         if (this.historyStack.length == 0) {
             return
         } else {
-            let lastState = this.historyStack[this.historyStack.length];
+            let lastState = this.historyStack[this.historyStack.length - 1];
             this.clearHistoryStack();
             this.router.navigate([`/${lastState}`]);
         }

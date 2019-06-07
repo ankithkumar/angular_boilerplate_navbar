@@ -1,4 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
+import { RouterNav } from '../service/routernav.service';
 
 @Component({
     selector: 'app-challenges',
@@ -7,8 +8,12 @@ import { Component, OnDestroy } from '@angular/core';
 })
 
 export class ChallengesComponent implements OnDestroy {
-    constructor() {
+    constructor(private routerNav: RouterNav) {
         console.log('in challenges component!!');
+    }
+
+    goTo(from, to) {
+        this.routerNav.navigateTo(from, to);
     }
 
     ngOnDestroy() {

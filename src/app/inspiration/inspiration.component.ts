@@ -1,4 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
+import { RouterNav } from '../service/routernav.service';
 
 @Component({
     selector: 'app-inspiration',
@@ -7,8 +8,12 @@ import { Component, OnDestroy } from '@angular/core';
 })
 
 export class InspirationComponent implements OnDestroy {
-    constructor() {
+    constructor(private routerNav: RouterNav) {
         console.log('in mainpage component!!');
+    }
+
+    goTo(from, to) {
+        this.routerNav.navigateTo(from, to);
     }
 
     ngOnDestroy() {
